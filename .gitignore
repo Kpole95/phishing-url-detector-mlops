@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Artifacts and data
+Artifacts/
+*.npy
+*.pkl
+*.log
+*.csv
+valid_data/
+prediction_output/
+
+# Environment
+.env
+venv/
+cybervenv/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
