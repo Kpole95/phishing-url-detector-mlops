@@ -1,6 +1,6 @@
 # Phishing URL Detection — End-to-End MLOps Pipeline
 
-[![CI/CD](https://github.com/Kpole95/network-security-mlops/actions/workflows/main.yml/badge.svg)](https://github.com/Kpole95/network-security-mlops/actions)
+[![CI/CD](https://github.com/Kpole95/phishing-url-detector-mlops/actions/workflows/main.yml/badge.svg)](https://github.com/Kpole95/phishing-url-detector-mlops/actions)
 [![MLflow](https://img.shields.io/badge/Experiment%20Tracking-MLflow%20%7C%20DagsHub-blue)](https://dagshub.com/krishnapole90/network-security-mlops/experiments)
 [![Python](https://img.shields.io/badge/Python-3.10-blue)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Container-Docker%20%7C%20ECR-2496ED)](https://aws.amazon.com/ecr/)
@@ -61,11 +61,11 @@ MongoDB Atlas
 
 ## Dataset
 
-**Source:** UCI ML Repository — Phishing Websites Dataset  
-**Records:** 11,055 URLs  
-**Features:** 30 ternary-encoded URL characteristics (`-1` = suspicious, `0` = neutral, `1` = legitimate)  
-**Target:** `Result` — Phishing (`1`) vs Legitimate (`-1`)  
-**Class balance:** 55.7% phishing / 44.3% legitimate  
+**Source:** UCI ML Repository — Phishing Websites Dataset
+**Records:** 11,055 URLs
+**Features:** 30 ternary-encoded URL characteristics (`-1` = suspicious, `0` = neutral, `1` = legitimate)
+**Target:** `Result` — Phishing (`1`) vs Legitimate (`-1`)
+**Class balance:** 55.7% phishing / 44.3% legitimate
 **Missing values:** None
 
 ### Feature categories
@@ -138,6 +138,7 @@ MongoDB Atlas
 📊 [View all experiments on DagsHub](https://dagshub.com/krishnapole90/network-security-mlops/experiments)
 
 ![DagsHub MLflow Experiments](docs/dagshub_experiments.png)
+
 ---
 
 ## API
@@ -195,7 +196,7 @@ Stage 3: Continuous Deployment (self-hosted runner)
 ## Project Structure
 
 ```
-network-security-mlops/
+phishing-url-detector-mlops/
 │
 ├── .github/workflows/main.yml       ← 3-stage CI/CD pipeline
 ├── Dockerfile                        ← Python 3.10-slim + AWS CLI
@@ -247,8 +248,8 @@ network-security-mlops/
 ### 1. Clone & install
 
 ```bash
-git clone https://github.com/Kpole95/network-security-mlops.git
-cd network-security-mlops
+git clone https://github.com/Kpole95/phishing-url-detector-mlops.git
+cd phishing-url-detector-mlops
 pip install -r requirements.txt
 ```
 
@@ -286,13 +287,13 @@ python app.py
 ### 6. Run with Docker
 
 ```bash
-docker build -t network-security-mlops .
+docker build -t phishing-url-detector-mlops .
 docker run -p 8000:8000 \
   -e MONGO_DB_URL=your_url \
   -e AWS_ACCESS_KEY_ID=your_key \
   -e AWS_SECRET_ACCESS_KEY=your_secret \
   -e AWS_REGION=us-east-1 \
-  network-security-mlops
+  phishing-url-detector-mlops
 ```
 
 ---
@@ -316,6 +317,6 @@ docker run -p 8000:8000 \
 
 ## Author
 
-**Murali Krishna Pole**  
-Azure Data Engineer | MLOps  
+**Murali Krishna Pole**
+Azure Data Engineer | MLOps
 [LinkedIn](https://linkedin.com/in/kpole) · [GitHub](https://github.com/Kpole95) · [DagsHub](https://dagshub.com/krishnapole90)
